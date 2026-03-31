@@ -77,6 +77,7 @@ cd navbar-project
 ## 📸 Demo
 
 > Add a GIF or screen recording here for better engagement
+> 
 
 ---
 
