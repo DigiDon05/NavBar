@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0D0D0D;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px 25px;
+
+  position: relative;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+}
+
+/* 🔥 Animated gradient border */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 15px;
+
+  background: linear-gradient(270deg, #00FF9C, #00C3FF, #00FF9C);
+  background-size: 300% 300%;
+
+  animation: borderMove 5s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
+}
+
+/* Logo */
+.logo {
+  color: #00FF9C;
+  font-size: 22px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+/* Links style */
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Underline base */
+.nav-links a {
+  position: relative;
+  color: #ccc;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Animated underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(90deg, #00FF9C, #00C3FF);
+  border-radius: 2px;
+
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #00FF9C;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hover glow */
+.nav-links a:hover {
+  color: #00FF9C;
+}
+
+/* 📱 Mobile menu */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+
+    transform: translateX(100%);
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
+.nav-links a::after {
+  box-shadow: 0 0 8px #00FF9C;
+}
