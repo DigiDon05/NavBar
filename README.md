@@ -9,13 +9,6 @@ A **modern, responsive navbar** built using **HTML, CSS, and JavaScript** featur
 
 ---
 
-## 📸 Preview
-
-> Add your screenshot or demo video here
-> (Tip: upload your navbar preview GIF or image)
-
----
-
 ## 🛠️ Tech Stack
 
 * HTML5
@@ -71,13 +64,6 @@ cd navbar-project
 * Glass effect created using `backdrop-filter`
 * Gradient border uses CSS animations
 * JavaScript toggles mobile menu
-
----
-
-## 📸 Demo
-
-> Add a GIF or screen recording here for better engagement
-> 
 
 ---
 
